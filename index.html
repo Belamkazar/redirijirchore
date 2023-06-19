@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Redirección sin enviar referer</title>
+</head>
+<body>
+
+<!-- Botón para realizar la redirección -->
+<button onclick="redirigirSinReferer()">Ir al enlace sin referer</button>
+
+<script>
+    function redirigirSinReferer() {
+        var link = "https://www.maduradas.com";
+        var newWindow = window.open(link, "_blank");
+
+        // Cerrar la ventana actual si se abrió una nueva pestaña o ventana
+        if (newWindow) {
+            window.close();
+        }
+    }
+</script>
+
+</body>
+</html>
